@@ -100,13 +100,16 @@ INSERT INTO sections (section_name) VALUES
 ('Education'), ('Experience'), ('Skills');
 
 
+-- Assign Sections to Templates
 INSERT INTO template_sections (template_id, section_id, section_order) VALUES
 (1, 1, 1), (1, 2, 2), (1, 3, 3),
 (2, 2, 1), (2, 3, 2), (2, 1, 3);
 
+-- Create User Resume
 INSERT INTO user_resumes (user_id, template_id, resume_name) VALUES
 (1, 1, 'Ram Resume v1');
 
+-- Link Sections to Resume
 INSERT INTO user_resume_sections (resume_id, section_id, section_order) VALUES
 (1, 1, 1), (1, 2, 2), (1, 3, 3);
 
